@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ARFMainViewController.h"
+#import "ARFConstants.h"
 
+#import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
 
 @interface AppDelegate ()
@@ -21,8 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     //Parse Registration
-    [Parse setApplicationId:@"6FFTBBVMBtCIw9tOdMVmBnz1TPetYy0DiuVuwwfz"
-                  clientKey:@"NQm4dWmObFNJq17tQOqzFYJZTTbaN3C8AixNtYN9"];
+    [Parse setApplicationId:kParseApplicationId
+                  clientKey:kParseClientKey];
     
     //Parse Notifications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
@@ -32,6 +34,9 @@
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
+    
+    //Parte Google Maps
+    [GMSServices provideAPIKey:kGoogleApiKey];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

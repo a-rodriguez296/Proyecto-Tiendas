@@ -30,6 +30,14 @@ static NSString *const cellIdentifier = @"Cell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommerceCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
     
+    
+    UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Finalizar"
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(dismissView:)];
+    self.navigationItem.rightBarButtonItem = flipButton;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,7 +117,7 @@ static NSString *const cellIdentifier = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     ARFCommerceCell *cell = (ARFCommerceCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
+    [cell setDelegate:self];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     PFObject *pfObject = [self objectAtIndexPath:indexPath];
     
@@ -122,6 +130,35 @@ static NSString *const cellIdentifier = @"Cell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 84;
+}
+
+#pragma mark ARFCommerCellDelegate
+-(void)ARFCommerceCell:(ARFCommerceCell *)cell didChangeSwitchState:(BOOL)state{
+    
+    
+    NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
+    PFObject *pfObject = [self objectAtIndexPath:currentIndexPath];
+    NSError *error;
+    ARFCommerce *commerce = (ARFCommerce *)[MTLParseAdapter modelOfClass:ARFCommerce.class fromParseObject:pfObject error:&error];
+    
+    PFInstallation * currentInstalation = [PFInstallation currentInstallation];
+    if (state) {
+        [currentInstalation addUniqueObject:commerce.commerceId forKey:kChannels];
+    }
+    else{
+        [currentInstalation removeObject:commerce.commerceId forKey:kChannels];
+    }
+    [currentInstalation saveEventually:^(BOOL succeeded, NSError *error){
+        if (!succeeded) {
+            
+        }
+    }];
+
+}
+
+#pragma mark Navigation
+-(void) dismissView:(id) sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

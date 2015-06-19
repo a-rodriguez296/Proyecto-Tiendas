@@ -7,7 +7,8 @@
 //
 
 #import "PFQueryTableViewController.h"
+#import "ARFCommerceCell.h"
 
-@interface ARFCommerceTableViewController : PFQueryTableViewController
+@interface ARFCommerceTableViewController : PFQueryTableViewController <ARFCommerCellDelegate>
 
 @end

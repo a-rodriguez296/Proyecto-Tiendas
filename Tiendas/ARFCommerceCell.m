@@ -34,8 +34,10 @@
 
 
 - (IBAction)switchDidChangeValue:(id)sender {
-    
-    
+    UISwitch *cellSwitch = (UISwitch *) sender;
+    if ([self.delegate respondsToSelector:@selector(ARFCommerceCell:didChangeSwitchState:)]) {
+        [self.delegate ARFCommerceCell:self didChangeSwitchState:cellSwitch.on];
+    }
 }
 
 @end

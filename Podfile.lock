@@ -1,6 +1,7 @@
 PODS:
   - Asterism (1.0.0)
   - Bolts/Tasks (1.2.0)
+  - GoogleMaps (1.10.1)
   - Mantle (1.5.4):
     - Mantle/extobjc (= 1.5.4)
   - Mantle/extobjc (1.5.4)
@@ -14,6 +15,7 @@ PODS:
     - Parse (~> 1.7)
 
 DEPENDENCIES:
+  - GoogleMaps
   - MTLParseAdapter
   - Parse
   - ParseUI
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
   MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
