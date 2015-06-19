@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ARFMainViewController.h
 //  Tiendas
 //
 //  Created by Alejandro Rodriguez on 6/19/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ARFMainViewController : UIViewController
 
 @end
-

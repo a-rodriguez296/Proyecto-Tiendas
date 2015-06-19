@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		9C2733641B3477EA0046EE02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2733631B3477EA0046EE02 /* main.m */; };
 		9C2733671B3477EA0046EE02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2733661B3477EA0046EE02 /* AppDelegate.m */; };
-		9C27336A1B3477EA0046EE02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2733691B3477EA0046EE02 /* ViewController.m */; };
-		9C27336D1B3477EA0046EE02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C27336B1B3477EA0046EE02 /* Main.storyboard */; };
 		9C27336F1B3477EA0046EE02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C27336E1B3477EA0046EE02 /* Images.xcassets */; };
 		9C2733721B3477EA0046EE02 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2733701B3477EA0046EE02 /* LaunchScreen.xib */; };
 		9C27337E1B3477EA0046EE02 /* TiendasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C27337D1B3477EA0046EE02 /* TiendasTests.m */; };
+		9C27338A1B3478610046EE02 /* ARFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2733881B3478610046EE02 /* ARFMainViewController.m */; };
+		9C27338B1B3478610046EE02 /* ARFMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2733891B3478610046EE02 /* ARFMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		9C2733631B3477EA0046EE02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C2733651B3477EA0046EE02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C2733661B3477EA0046EE02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9C2733681B3477EA0046EE02 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C2733691B3477EA0046EE02 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9C27336C1B3477EA0046EE02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C27336E1B3477EA0046EE02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C2733711B3477EA0046EE02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9C2733771B3477EA0046EE02 /* TiendasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiendasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27337C1B3477EA0046EE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C27337D1B3477EA0046EE02 /* TiendasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiendasTests.m; sourceTree = "<group>"; };
+		9C2733871B3478610046EE02 /* ARFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMainViewController.h; sourceTree = "<group>"; };
+		9C2733881B3478610046EE02 /* ARFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMainViewController.m; sourceTree = "<group>"; };
+		9C2733891B3478610046EE02 /* ARFMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				9C2733651B3477EA0046EE02 /* AppDelegate.h */,
 				9C2733661B3477EA0046EE02 /* AppDelegate.m */,
-				9C2733681B3477EA0046EE02 /* ViewController.h */,
-				9C2733691B3477EA0046EE02 /* ViewController.m */,
-				9C27336B1B3477EA0046EE02 /* Main.storyboard */,
 				9C27336E1B3477EA0046EE02 /* Images.xcassets */,
 				9C2733701B3477EA0046EE02 /* LaunchScreen.xib */,
 				9C2733611B3477EA0046EE02 /* Supporting Files */,
+				9C2733871B3478610046EE02 /* ARFMainViewController.h */,
+				9C2733881B3478610046EE02 /* ARFMainViewController.m */,
+				9C2733891B3478610046EE02 /* ARFMainViewController.xib */,
 			);
 			path = Tiendas;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C27336D1B3477EA0046EE02 /* Main.storyboard in Resources */,
+				9C27338B1B3478610046EE02 /* ARFMainViewController.xib in Resources */,
 				9C2733721B3477EA0046EE02 /* LaunchScreen.xib in Resources */,
 				9C27336F1B3477EA0046EE02 /* Images.xcassets in Resources */,
 			);
@@ -219,9 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C27336A1B3477EA0046EE02 /* ViewController.m in Sources */,
 				9C2733671B3477EA0046EE02 /* AppDelegate.m in Sources */,
 				9C2733641B3477EA0046EE02 /* main.m in Sources */,
+				9C27338A1B3478610046EE02 /* ARFMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C27336B1B3477EA0046EE02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C27336C1B3477EA0046EE02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C2733701B3477EA0046EE02 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
