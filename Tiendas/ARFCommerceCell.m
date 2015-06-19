@@ -1,0 +1,41 @@
+//
+//  ARFCommerceCell.m
+//  Tiendas
+//
+//  Created by Alejandro Rodriguez on 6/19/15.
+//  Copyright (c) 2015 Alejandro Rodriguez. All rights reserved.
+//
+
+#import "ARFCommerceCell.h"
+#import "Commerce.h"
+
+@interface ARFCommerceCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblCommerceName;
+@property (weak, nonatomic) IBOutlet UISwitch *cellSwitch;
+
+@end
+
+
+@implementation ARFCommerceCell
+
+
+-(void) configureCellWithCommerce:(Commerce *) commerceObject{
+    [self.lblCommerceName setText:commerceObject.commerceName];
+    [self.cellSwitch setOn:commerceObject.isUserSignedUp];
+}
+
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+
+- (IBAction)switchDidChangeValue:(id)sender {
+    
+    
+}
+
+@end

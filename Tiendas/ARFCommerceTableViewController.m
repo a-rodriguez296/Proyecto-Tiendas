@@ -9,6 +9,7 @@
 #import "ARFCommerceTableViewController.h"
 #import "ARFConstants.h"
 #import "Commerce.h"
+#import "ARFCommerceCell.h"
 
 #import "Parse/Parse.h"
 #import <ParseUI/ParseUI.h>
@@ -19,11 +20,16 @@
 
 @end
 
+static NSString *const cellIdentifier = @"Cell";
+
 @implementation ARFCommerceTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommerceCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,26 +108,20 @@
 // and the imageView being the imageKey in the object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
-//    StoreCell *cell = (StoreCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-//    [cell setDelegate:self];
+    ARFCommerceCell *cell = (ARFCommerceCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     PFObject *pfObject = [self objectAtIndexPath:indexPath];
-//    Store *storeObject = [Store initWithPFObject:pfObject];
     
     NSError *error;
-    Commerce *commerce = [MTLParseAdapter modelOfClass:Commerce.class
-                               fromParseObject:pfObject
-                                         error:&error];
+    Commerce *commerce = (Commerce *)[MTLParseAdapter modelOfClass:Commerce.class fromParseObject:pfObject error:&error];
+    [cell configureCellWithCommerce:commerce];
     
-//    SelectStoreResultViewModel *selectStoreVM = [[SelectStoreResultViewModel alloc]initWithStoreObject:storeObject];
-    // Configure the cell
-//    [cell configureCellWithResultViewModel:selectStoreVM];
-    
-    return nil;
+    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 104;
+    return 84;
 }
 
 @end

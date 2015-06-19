@@ -16,6 +16,8 @@
 		9C27338B1B3478610046EE02 /* ARFMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2733891B3478610046EE02 /* ARFMainViewController.xib */; };
 		9C2733901B347D7E0046EE02 /* ARFCommerceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C27338F1B347D7E0046EE02 /* ARFCommerceTableViewController.m */; };
 		9C2733941B34820C0046EE02 /* Commerce.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2733931B34820C0046EE02 /* Commerce.m */; };
+		9C2733991B34A0FC0046EE02 /* ARFCommerceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2733981B34A0FC0046EE02 /* ARFCommerceCell.xib */; };
+		9C27339D1B34A15C0046EE02 /* ARFCommerceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C27339C1B34A15C0046EE02 /* ARFCommerceCell.m */; };
 		EC628F48283C10F1FDEEABF0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A27CFCCA21CE1A728F7114F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,9 @@
 		9C2733911B347EAF0046EE02 /* ARFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFConstants.h; sourceTree = "<group>"; };
 		9C2733921B34820C0046EE02 /* Commerce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commerce.h; sourceTree = "<group>"; };
 		9C2733931B34820C0046EE02 /* Commerce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Commerce.m; sourceTree = "<group>"; };
+		9C2733981B34A0FC0046EE02 /* ARFCommerceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommerceCell.xib; sourceTree = "<group>"; };
+		9C27339B1B34A15C0046EE02 /* ARFCommerceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceCell.h; sourceTree = "<group>"; };
+		9C27339C1B34A15C0046EE02 /* ARFCommerceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceCell.m; sourceTree = "<group>"; };
 		A27CFCCA21CE1A728F7114F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDAEBCF9DA6A69766E745AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +108,8 @@
 		9C2733601B3477EA0046EE02 /* Tiendas */ = {
 			isa = PBXGroup;
 			children = (
+				9C27339A1B34A1420046EE02 /* Views */,
+				9C2733961B34A06D0046EE02 /* Utils */,
 				9C2733951B3482130046EE02 /* Models */,
 				9C2733651B3477EA0046EE02 /* AppDelegate.h */,
 				9C2733661B3477EA0046EE02 /* AppDelegate.m */,
@@ -110,7 +117,6 @@
 				9C2733701B3477EA0046EE02 /* LaunchScreen.xib */,
 				9C2733611B3477EA0046EE02 /* Supporting Files */,
 				9C27338D1B347D270046EE02 /* Controllers */,
-				9C2733911B347EAF0046EE02 /* ARFConstants.h */,
 			);
 			path = Tiendas;
 			sourceTree = "<group>";
@@ -155,8 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9C27338C1B347D1D0046EE02 /* Main Screen */,
-				9C27338E1B347D7E0046EE02 /* ARFCommerceTableViewController.h */,
-				9C27338F1B347D7E0046EE02 /* ARFCommerceTableViewController.m */,
+				9C2733971B34A07B0046EE02 /* TableVC Commerce */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +173,33 @@
 				9C2733931B34820C0046EE02 /* Commerce.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		9C2733961B34A06D0046EE02 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C2733911B347EAF0046EE02 /* ARFConstants.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		9C2733971B34A07B0046EE02 /* TableVC Commerce */ = {
+			isa = PBXGroup;
+			children = (
+				9C27338E1B347D7E0046EE02 /* ARFCommerceTableViewController.h */,
+				9C27338F1B347D7E0046EE02 /* ARFCommerceTableViewController.m */,
+			);
+			name = "TableVC Commerce";
+			sourceTree = "<group>";
+		};
+		9C27339A1B34A1420046EE02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C2733981B34A0FC0046EE02 /* ARFCommerceCell.xib */,
+				9C27339B1B34A15C0046EE02 /* ARFCommerceCell.h */,
+				9C27339C1B34A15C0046EE02 /* ARFCommerceCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D436E9DF82C256980CFFEFC3 /* Pods */ = {
@@ -264,6 +296,7 @@
 				9C27338B1B3478610046EE02 /* ARFMainViewController.xib in Resources */,
 				9C2733721B3477EA0046EE02 /* LaunchScreen.xib in Resources */,
 				9C27336F1B3477EA0046EE02 /* Images.xcassets in Resources */,
+				9C2733991B34A0FC0046EE02 /* ARFCommerceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C27339D1B34A15C0046EE02 /* ARFCommerceCell.m in Sources */,
 				9C2733901B347D7E0046EE02 /* ARFCommerceTableViewController.m in Sources */,
 				9C2733671B3477EA0046EE02 /* AppDelegate.m in Sources */,
 				9C2733641B3477EA0046EE02 /* main.m in Sources */,
