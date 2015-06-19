@@ -7,6 +7,7 @@
 //
 
 #import "ARFMainViewController.h"
+#import "ARFCommerceTableViewController.h"
 
 @interface ARFMainViewController ()
 
@@ -24,14 +25,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didTapAddCommerce:(id)sender {
+    
+    ARFCommerceTableViewController *commerceTableVC = [ARFCommerceTableViewController new];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:commerceTableVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
 }
-*/
 
 @end

@@ -20,10 +20,23 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6z-dl-eyR">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items>
+                        <barButtonItem title="Agregar Tiendas" id="5X0-Tv-ht2">
+                            <connections>
+                                <action selector="didTapAddCommerce:" destination="-1" id="CT1-dL-JjP"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="T6z-dl-eyR" secondAttribute="trailing" id="0Ua-ih-zT0"/>
                 <constraint firstAttribute="centerY" secondItem="3KU-kF-Mje" secondAttribute="centerY" id="3Ee-pD-blc"/>
+                <constraint firstAttribute="bottom" secondItem="T6z-dl-eyR" secondAttribute="bottom" id="776-BO-mhc"/>
+                <constraint firstItem="T6z-dl-eyR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OFL-Kt-Miu"/>
                 <constraint firstAttribute="centerX" secondItem="3KU-kF-Mje" secondAttribute="centerX" id="UIV-sI-8GT"/>
             </constraints>
         </view>
