@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Commerce;
+@class ARFCommerce;
 
 @interface ARFCommerceCell : UITableViewCell
 
--(void) configureCellWithCommerce:(Commerce *) commerceObject;
+-(void) configureCellWithCommerce:(ARFCommerce *) commerceObject;
 
 @end

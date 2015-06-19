@@ -9,7 +9,7 @@
 
 #import <Mantle/Mantle.h>
 
-@interface Commerce : MTLModel <MTLJSONSerializing>
+@interface ARFCommerce : MTLModel <MTLJSONSerializing>
 
 
 @property(nonatomic, copy, readonly) NSString *commerceName;

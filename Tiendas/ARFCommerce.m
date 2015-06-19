@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Alejandro Rodriguez. All rights reserved.
 //
 
-#import "Commerce.h"
+#import "ARFCommerce.h"
 #import "ARFConstants.h"
 
 #import <Parse/Parse.h>
-@implementation Commerce
+@implementation ARFCommerce
 
 
 #pragma mark MTLJSONSerializing

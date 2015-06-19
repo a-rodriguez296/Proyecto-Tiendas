@@ -8,7 +8,7 @@
 
 #import "ARFCommerceTableViewController.h"
 #import "ARFConstants.h"
-#import "Commerce.h"
+#import "ARFCommerce.h"
 #import "ARFCommerceCell.h"
 
 #import "Parse/Parse.h"
@@ -114,7 +114,7 @@ static NSString *const cellIdentifier = @"Cell";
     PFObject *pfObject = [self objectAtIndexPath:indexPath];
     
     NSError *error;
-    Commerce *commerce = (Commerce *)[MTLParseAdapter modelOfClass:Commerce.class fromParseObject:pfObject error:&error];
+    ARFCommerce *commerce = (ARFCommerce *)[MTLParseAdapter modelOfClass:ARFCommerce.class fromParseObject:pfObject error:&error];
     [cell configureCellWithCommerce:commerce];
     
     return cell;

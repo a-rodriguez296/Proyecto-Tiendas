@@ -7,7 +7,7 @@
 //
 
 #import "ARFCommerceCell.h"
-#import "Commerce.h"
+#import "ARFCommerce.h"
 
 @interface ARFCommerceCell ()
 
@@ -20,7 +20,7 @@
 @implementation ARFCommerceCell
 
 
--(void) configureCellWithCommerce:(Commerce *) commerceObject{
+-(void) configureCellWithCommerce:(ARFCommerce *) commerceObject{
     [self.lblCommerceName setText:commerceObject.commerceName];
     [self.cellSwitch setOn:commerceObject.isUserSignedUp];
 }
