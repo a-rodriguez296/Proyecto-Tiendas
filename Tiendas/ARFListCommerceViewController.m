@@ -56,7 +56,7 @@ static NSString *const cellIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setTitle:@"Lista Tiendas"];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommerceCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.

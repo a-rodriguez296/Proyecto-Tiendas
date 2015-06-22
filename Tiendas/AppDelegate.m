@@ -11,6 +11,7 @@
 #import "ARFConstants.h"
 
 #import <Parse/Parse.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate ()
 
@@ -25,6 +26,9 @@
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
+    
+    //Parte Google Maps
+    [GMSServices provideAPIKey:kGoogleApiKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[ARFInitialViewController alloc] initWithNibName:nil bundle:nil];

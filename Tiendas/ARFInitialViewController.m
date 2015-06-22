@@ -8,6 +8,7 @@
 
 #import "ARFInitialViewController.h"
 #import "ARFListCommerceViewController.h"
+#import "ARFMapCommerceViewController.h"
 
 @interface ARFInitialViewController ()
 
@@ -26,10 +27,16 @@
 }
 
 - (IBAction)didTapAddCommerce:(id)sender {
-    
     ARFListCommerceViewController *listCommerceVC = [[ARFListCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
-    [self presentViewController:navVC animated:YES completion:nil];
+    UINavigationController *listNavVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
+    
+    ARFMapCommerceViewController *mapVC = [[ARFMapCommerceViewController alloc] init];
+    UINavigationController *mapNavVC = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    
+    UITabBarController *tabBar = [UITabBarController new];
+    [tabBar setViewControllers:@[listNavVC, mapNavVC]];
+    
+    [self presentViewController:tabBar animated:YES completion:nil];
     
 }
 

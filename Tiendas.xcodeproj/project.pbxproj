@@ -19,6 +19,10 @@
 		9CEE5AF11B38BDB6005F555A /* ARFCommerce.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AF01B38BDB6005F555A /* ARFCommerce.m */; };
 		9CEE5AF71B38BE1D005F555A /* ARFCommerceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AF51B38BE1D005F555A /* ARFCommerceCell.m */; };
 		9CEE5AF81B38BE1D005F555A /* ARFCommerceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AF61B38BE1D005F555A /* ARFCommerceCell.xib */; };
+		9CEE5AFD1B38C2D4005F555A /* ARFMapCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AFB1B38C2D3005F555A /* ARFMapCommerceViewController.m */; };
+		9CEE5AFE1B38C2D4005F555A /* ARFMapCommerceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AFC1B38C2D3005F555A /* ARFMapCommerceViewController.xib */; };
+		9CEE5B021B38C2F0005F555A /* ARFMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5B001B38C2F0005F555A /* ARFMarkerView.m */; };
+		9CEE5B031B38C2F0005F555A /* ARFMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5B011B38C2F0005F555A /* ARFMarkerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,12 @@
 		9CEE5AF41B38BE1D005F555A /* ARFCommerceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceCell.h; sourceTree = "<group>"; };
 		9CEE5AF51B38BE1D005F555A /* ARFCommerceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceCell.m; sourceTree = "<group>"; };
 		9CEE5AF61B38BE1D005F555A /* ARFCommerceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommerceCell.xib; sourceTree = "<group>"; };
+		9CEE5AFA1B38C2D3005F555A /* ARFMapCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMapCommerceViewController.h; sourceTree = "<group>"; };
+		9CEE5AFB1B38C2D3005F555A /* ARFMapCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMapCommerceViewController.m; sourceTree = "<group>"; };
+		9CEE5AFC1B38C2D3005F555A /* ARFMapCommerceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFMapCommerceViewController.xib; sourceTree = "<group>"; };
+		9CEE5AFF1B38C2F0005F555A /* ARFMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMarkerView.h; sourceTree = "<group>"; };
+		9CEE5B001B38C2F0005F555A /* ARFMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMarkerView.m; sourceTree = "<group>"; };
+		9CEE5B011B38C2F0005F555A /* ARFMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFMarkerView.xib; sourceTree = "<group>"; };
 		F3890F2E3A6DCD46AF815367 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +162,7 @@
 		9CEE5AE81B38B9F1005F555A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CEE5B061B38C34E005F555A /* Map VC */,
 				9CEE5AE71B38B9E8005F555A /* Initial VC */,
 				9CEE5AF31B38BDC8005F555A /* List VC */,
 			);
@@ -187,11 +198,40 @@
 		9CEE5AF91B38BE23005F555A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9CEE5B041B38C30C005F555A /* Marker View */,
+				9CEE5B051B38C314005F555A /* Commerce Cell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9CEE5B041B38C30C005F555A /* Marker View */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE5AFF1B38C2F0005F555A /* ARFMarkerView.h */,
+				9CEE5B001B38C2F0005F555A /* ARFMarkerView.m */,
+				9CEE5B011B38C2F0005F555A /* ARFMarkerView.xib */,
+			);
+			name = "Marker View";
+			sourceTree = "<group>";
+		};
+		9CEE5B051B38C314005F555A /* Commerce Cell */ = {
+			isa = PBXGroup;
+			children = (
 				9CEE5AF41B38BE1D005F555A /* ARFCommerceCell.h */,
 				9CEE5AF51B38BE1D005F555A /* ARFCommerceCell.m */,
 				9CEE5AF61B38BE1D005F555A /* ARFCommerceCell.xib */,
 			);
-			name = Views;
+			name = "Commerce Cell";
+			sourceTree = "<group>";
+		};
+		9CEE5B061B38C34E005F555A /* Map VC */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE5AFA1B38C2D3005F555A /* ARFMapCommerceViewController.h */,
+				9CEE5AFB1B38C2D3005F555A /* ARFMapCommerceViewController.m */,
+				9CEE5AFC1B38C2D3005F555A /* ARFMapCommerceViewController.xib */,
+			);
+			name = "Map VC";
 			sourceTree = "<group>";
 		};
 		9DE7609104833A98AD7D7B4F /* Pods */ = {
@@ -294,7 +334,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEE5B031B38C2F0005F555A /* ARFMarkerView.xib in Resources */,
 				9CEE5AF81B38BE1D005F555A /* ARFCommerceCell.xib in Resources */,
+				9CEE5AFE1B38C2D4005F555A /* ARFMapCommerceViewController.xib in Resources */,
 				9CEE5ACD1B38B79F005F555A /* LaunchScreen.xib in Resources */,
 				9CEE5ACA1B38B79F005F555A /* Images.xcassets in Resources */,
 				9CEE5AE61B38B971005F555A /* ARFInitialViewController.xib in Resources */,
@@ -348,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEE5B021B38C2F0005F555A /* ARFMarkerView.m in Sources */,
 				9CEE5AF71B38BE1D005F555A /* ARFCommerceCell.m in Sources */,
 				9CEE5AF11B38BDB6005F555A /* ARFCommerce.m in Sources */,
 				9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */,
+				9CEE5AFD1B38C2D4005F555A /* ARFMapCommerceViewController.m in Sources */,
 				9CEE5AEE1B38BB97005F555A /* ARFListCommerceViewController.m in Sources */,
 				9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */,
 				9CEE5ABF1B38B79F005F555A /* main.m in Sources */,
