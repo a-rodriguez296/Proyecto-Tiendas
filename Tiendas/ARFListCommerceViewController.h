@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <ParseUI/ParseUI.h>
+#import "ARFCommerceCell.h"
 
-@interface ARFListCommerceViewController  : PFQueryTableViewController
+@interface ARFListCommerceViewController  : PFQueryTableViewController <ARFCommerceCellDelegate>
 
 @end

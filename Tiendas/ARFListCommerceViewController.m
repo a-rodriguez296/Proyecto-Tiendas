@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ARFListCommerceViewController.h"
 #import "ARFConstants.h"
-#import "ARFCommerceCell.h"
 #import "ARFCommerce.h"
 
 #import "MTLParseAdapter.h"
@@ -135,7 +134,7 @@ static NSString *const cellIdentifier = @"Cell";
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
  
      ARFCommerceCell *cell = (ARFCommerceCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//     [cell setDelegate:self];
+     [cell setDelegate:self];
      [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
      PFObject *pfObject = [self objectAtIndexPath:indexPath];
      
@@ -179,10 +178,25 @@ static NSString *const cellIdentifier = @"Cell";
     return 84;
 }
 
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+-(void)ARFCommerceCell:(ARFCommerceCell *)cell didChangeSwitchState:(BOOL)state{
+    
+    NSIndexPath *currentIndexPath = [self.tableView indexPathForCell:cell];
+    PFObject *pfObject = [self objectAtIndexPath:currentIndexPath];
+    NSError *error;
+    ARFCommerce *commerce = (ARFCommerce *)[MTLParseAdapter modelOfClass:ARFCommerce.class fromParseObject:pfObject error:&error];
+    
+    PFInstallation * currentInstalation = [PFInstallation currentInstallation];
+    if (state) {
+        [currentInstalation addUniqueObject:commerce.commerceId forKey:kChannels];
+    }
+    else{
+        [currentInstalation removeObject:commerce.commerceId forKey:kChannels];
+    }
+    [currentInstalation saveEventually:^(BOOL succeeded, NSError *error){
+        if (!succeeded) {
+            
+        }
+    }];
 }
 
 @end
