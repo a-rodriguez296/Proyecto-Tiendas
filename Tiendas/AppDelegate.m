@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ARFInitialViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[ARFInitialViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.backgroundColor = [UIColor clearColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 

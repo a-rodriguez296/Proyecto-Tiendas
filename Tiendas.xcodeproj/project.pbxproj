@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E068E0E83885E77C7E95381 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3E4A0ED1F4DEF16D629C7C /* libPods.a */; };
 		9CEE5ABF1B38B79F005F555A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5ABE1B38B79F005F555A /* main.m */; };
 		9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC11B38B79F005F555A /* AppDelegate.m */; };
-		9CEE5AC51B38B79F005F555A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC41B38B79F005F555A /* ViewController.m */; };
-		9CEE5AC81B38B79F005F555A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC61B38B79F005F555A /* Main.storyboard */; };
 		9CEE5ACA1B38B79F005F555A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC91B38B79F005F555A /* Images.xcassets */; };
 		9CEE5ACD1B38B79F005F555A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5ACB1B38B79F005F555A /* LaunchScreen.xib */; };
 		9CEE5AD91B38B79F005F555A /* TiendasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AD81B38B79F005F555A /* TiendasTests.m */; };
+		9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AE31B38B971005F555A /* ARFInitialViewController.m */; };
+		9CEE5AE61B38B971005F555A /* ARFInitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AE41B38B971005F555A /* ARFInitialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +28,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E7138B1C317B266A7A936BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9B3E4A0ED1F4DEF16D629C7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEE5AB91B38B79F005F555A /* Tiendas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiendas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEE5ABD1B38B79F005F555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEE5ABE1B38B79F005F555A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CEE5AC01B38B79F005F555A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CEE5AC11B38B79F005F555A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CEE5AC31B38B79F005F555A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CEE5AC41B38B79F005F555A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9CEE5AC71B38B79F005F555A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CEE5AC91B38B79F005F555A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9CEE5ACC1B38B79F005F555A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9CEE5AD21B38B79F005F555A /* TiendasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiendasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEE5AD71B38B79F005F555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEE5AD81B38B79F005F555A /* TiendasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiendasTests.m; sourceTree = "<group>"; };
+		9CEE5AE21B38B971005F555A /* ARFInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFInitialViewController.h; sourceTree = "<group>"; };
+		9CEE5AE31B38B971005F555A /* ARFInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFInitialViewController.m; sourceTree = "<group>"; };
+		9CEE5AE41B38B971005F555A /* ARFInitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFInitialViewController.xib; sourceTree = "<group>"; };
+		F3890F2E3A6DCD46AF815367 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E068E0E83885E77C7E95381 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				9CEE5ABB1B38B79F005F555A /* Tiendas */,
 				9CEE5AD51B38B79F005F555A /* TiendasTests */,
 				9CEE5ABA1B38B79F005F555A /* Products */,
+				9DE7609104833A98AD7D7B4F /* Pods */,
+				C5E9E0C8128A334AA3309F99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,12 +90,10 @@
 			children = (
 				9CEE5AC01B38B79F005F555A /* AppDelegate.h */,
 				9CEE5AC11B38B79F005F555A /* AppDelegate.m */,
-				9CEE5AC31B38B79F005F555A /* ViewController.h */,
-				9CEE5AC41B38B79F005F555A /* ViewController.m */,
-				9CEE5AC61B38B79F005F555A /* Main.storyboard */,
 				9CEE5AC91B38B79F005F555A /* Images.xcassets */,
 				9CEE5ACB1B38B79F005F555A /* LaunchScreen.xib */,
 				9CEE5ABC1B38B79F005F555A /* Supporting Files */,
+				9CEE5AE81B38B9F1005F555A /* Controllers */,
 			);
 			path = Tiendas;
 			sourceTree = "<group>";
@@ -119,6 +124,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9CEE5AE71B38B9E8005F555A /* Initial VC */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE5AE21B38B971005F555A /* ARFInitialViewController.h */,
+				9CEE5AE31B38B971005F555A /* ARFInitialViewController.m */,
+				9CEE5AE41B38B971005F555A /* ARFInitialViewController.xib */,
+			);
+			name = "Initial VC";
+			sourceTree = "<group>";
+		};
+		9CEE5AE81B38B9F1005F555A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE5AE71B38B9E8005F555A /* Initial VC */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9DE7609104833A98AD7D7B4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3890F2E3A6DCD46AF815367 /* Pods.debug.xcconfig */,
+				8E7138B1C317B266A7A936BD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5E9E0C8128A334AA3309F99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B3E4A0ED1F4DEF16D629C7C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CEE5ADC1B38B79F005F555A /* Build configuration list for PBXNativeTarget "Tiendas" */;
 			buildPhases = (
+				616BDF7D7084D3FC3A2B46DF /* Check Pods Manifest.lock */,
 				9CEE5AB51B38B79F005F555A /* Sources */,
 				9CEE5AB61B38B79F005F555A /* Frameworks */,
 				9CEE5AB71B38B79F005F555A /* Resources */,
+				953F4ECFD12C57F4C0E1D640 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEE5AC81B38B79F005F555A /* Main.storyboard in Resources */,
 				9CEE5ACD1B38B79F005F555A /* LaunchScreen.xib in Resources */,
 				9CEE5ACA1B38B79F005F555A /* Images.xcassets in Resources */,
+				9CEE5AE61B38B971005F555A /* ARFInitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,13 +256,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		616BDF7D7084D3FC3A2B46DF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		953F4ECFD12C57F4C0E1D640 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CEE5AB51B38B79F005F555A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEE5AC51B38B79F005F555A /* ViewController.m in Sources */,
 				9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */,
+				9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */,
 				9CEE5ABF1B38B79F005F555A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +319,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9CEE5AC61B38B79F005F555A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CEE5AC71B38B79F005F555A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9CEE5ACB1B38B79F005F555A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +412,7 @@
 		};
 		9CEE5ADD1B38B79F005F555A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3890F2E3A6DCD46AF815367 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tiendas/Info.plist;
@@ -355,6 +423,7 @@
 		};
 		9CEE5ADE1B38B79F005F555A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7138B1C317B266A7A936BD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tiendas/Info.plist;
@@ -416,6 +485,7 @@
 				9CEE5ADE1B38B79F005F555A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CEE5ADF1B38B79F005F555A /* Build configuration list for PBXNativeTarget "TiendasTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +494,7 @@
 				9CEE5AE11B38B79F005F555A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

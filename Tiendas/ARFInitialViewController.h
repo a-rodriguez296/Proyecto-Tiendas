@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ARFInitialViewController.h
 //  Tiendas
 //
 //  Created by Alejandro Rodriguez on 6/22/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ARFInitialViewController : UIViewController
 
 @end
-

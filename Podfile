@@ -1,0 +1,5 @@
+pod 'Parse'
+pod 'ParseUI'
+pod 'MTLParseAdapter'
+pod 'GoogleMaps'
+pod 'ReactiveCocoa'
