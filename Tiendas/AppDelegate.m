@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ARFInitialViewController.h"
+#import "ARFConstants.h"
+
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    
+    //Parse Registration
+    [Parse setApplicationId:kParseApplicationId
+                  clientKey:kParseClientKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[ARFInitialViewController alloc] initWithNibName:nil bundle:nil];
