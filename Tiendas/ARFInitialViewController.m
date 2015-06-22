@@ -28,7 +28,8 @@
 - (IBAction)didTapAddCommerce:(id)sender {
     
     ARFListCommerceViewController *listCommerceVC = [[ARFListCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self presentViewController:listCommerceVC animated:YES completion:nil];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
+    [self presentViewController:navVC animated:YES completion:nil];
     
 }
 
