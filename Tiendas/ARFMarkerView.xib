@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ARFMarkerView">
-            <rect key="frame" x="0.0" y="0.0" width="269" height="66"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4b-NA-cbo">
@@ -17,15 +17,23 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-5V-mci">
-                    <rect key="frame" x="212" y="17" width="51" height="31"/>
+                    <rect key="frame" x="263" y="17" width="51" height="31"/>
                 </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-iN-vgx">
+                    <rect key="frame" x="80" y="0.0" width="160" height="66"/>
+                    <color key="backgroundColor" red="0.3355573979" green="1" blue="0.2403857385" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="0.63" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.99973778859999995" green="1" blue="0.076189882269999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="g4b-NA-cbo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1dQ-bX-Hiy"/>
+                <constraint firstItem="2nb-5V-mci" firstAttribute="leading" secondItem="pPe-iN-vgx" secondAttribute="trailing" constant="23" id="AhD-zb-knu"/>
                 <constraint firstAttribute="trailing" secondItem="2nb-5V-mci" secondAttribute="trailing" constant="8" id="EQR-6v-LJh"/>
+                <constraint firstItem="pPe-iN-vgx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SJj-h9-rjQ"/>
+                <constraint firstItem="pPe-iN-vgx" firstAttribute="leading" secondItem="g4b-NA-cbo" secondAttribute="trailing" constant="23" id="acS-Sj-540"/>
                 <constraint firstItem="2nb-5V-mci" firstAttribute="centerY" secondItem="g4b-NA-cbo" secondAttribute="centerY" constant="-0.5" id="cuK-Zr-thf"/>
                 <constraint firstAttribute="centerY" secondItem="g4b-NA-cbo" secondAttribute="centerY" id="pj7-rL-xBe"/>
+                <constraint firstAttribute="bottom" secondItem="pPe-iN-vgx" secondAttribute="bottom" id="vYh-OJ-Udg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -33,7 +41,7 @@
                 <outlet property="lblCommerceName" destination="g4b-NA-cbo" id="RwZ-Bv-Cop"/>
                 <outlet property="viewSwitch" destination="2nb-5V-mci" id="E4a-tF-9Eb"/>
             </connections>
-            <point key="canvasLocation" x="652.5" y="398"/>
+            <point key="canvasLocation" x="663" y="398"/>
         </view>
     </objects>
 </document>

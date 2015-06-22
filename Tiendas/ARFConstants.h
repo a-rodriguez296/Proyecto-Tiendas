@@ -10,7 +10,7 @@
 
 
 
-//Constantes Api Keys librerías
+#pragma mark Api Keys librerías
 
 //Parse
 static NSString* const kParseApplicationId        = @"6FFTBBVMBtCIw9tOdMVmBnz1TPetYy0DiuVuwwfz";
@@ -20,12 +20,12 @@ static NSString* const kParseClientKey        = @"NQm4dWmObFNJq17tQOqzFYJZTTbaN3
 static NSString* const kGoogleApiKey        = @"AIzaSyB3DBQSBQ10y-gKdzO5fAtZIzu3hSBO-No";
 
 
-//Atributos entidad Commerce
+#pragma mark Atributos entidad Commerce
 static NSString* const kCommerceClassName        = @"Commerce";
 static NSString* const kCommerceName        = @"commerceName";
 static NSString* const kCommerceId        = @"commerceId";
 static NSString* const kChannels        = @"channels";
 
 
-//Animación
+#pragma mark Animación
 static float const kAnimationConstant = 0.5;

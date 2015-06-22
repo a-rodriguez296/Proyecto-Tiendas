@@ -15,11 +15,13 @@
 #import <Parse/Parse.h>
 #import "MTLParseAdapter.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "PureLayout.h"
 
 @interface ARFMapCommerceViewController () <GMSMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapViewBottomCnst;
+@property (nonatomic, strong) ARFMarkerView *markerView;
 
 
 @end
@@ -82,16 +84,38 @@
     
 }
 
+
+#pragma mark GMSMapViewDelegate
 -(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker{
     @weakify(self);
+    
+
     [UIView animateWithDuration:kAnimationConstant animations:^{
         @strongify(self);
-        [self.mapViewBottomCnst setConstant:50];
+        
+
+        
+
+        
+//        //Mover el mapa hacia arriba
+        [self.mapViewBottomCnst setConstant:66];
         [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        @strongify(self);
+        self.markerView =[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFMarkerView class]) owner:self options:nil] firstObject];
+        [self.view addSubview:self.markerView];
+        
+        NSDictionary *dict = @{@"markerView": self.markerView, @"mapView": self.mapView};
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mapView]-[markerView]" options:NSLayoutFormatDirectionLeftToRight metrics:nil views:dict]];
+//
+//        NSLog(@"%f", self.view.frame.size.height);
+//        [self.markerView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.mapView];
+//        [self.markerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.mapView];
+        [self.view layoutIfNeeded];
+        
+
     }];
-    
-    
-    
+
     return YES;
 }
 
@@ -107,22 +131,6 @@
     }
 
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
 
