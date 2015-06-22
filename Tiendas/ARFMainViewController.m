@@ -8,6 +8,8 @@
 
 #import "ARFMainViewController.h"
 #import "ARFCommerceTableViewController.h"
+#import "ARFMapCommerceViewController.h"
+
 
 @interface ARFMainViewController ()
 
@@ -29,7 +31,8 @@
 - (IBAction)didTapAddCommerce:(id)sender {
     
     ARFCommerceTableViewController *commerceTableVC = [ARFCommerceTableViewController new];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:commerceTableVC];
+    ARFMapCommerceViewController *mapVC = [ARFMapCommerceViewController new];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:mapVC];
     
     [self presentViewController:navVC animated:YES completion:nil];
 }

@@ -7,7 +7,7 @@
 //
 
 
-static NSString* const kCommerceClassName        = @"Commerce";
+
 
 
 //Constantes Api Keys librerías
@@ -17,10 +17,15 @@ static NSString* const kParseApplicationId        = @"6FFTBBVMBtCIw9tOdMVmBnz1TP
 static NSString* const kParseClientKey        = @"NQm4dWmObFNJq17tQOqzFYJZTTbaN3C8AixNtYN9";
 
 //Mapas
-static NSString* const kGoogleApiKey        = @"hkDrGVwKgvycUxkpLyR5q7cO9Q";
+static NSString* const kGoogleApiKey        = @"AIzaSyB3DBQSBQ10y-gKdzO5fAtZIzu3hSBO-No";
 
 
 //Atributos entidad Commerce
+static NSString* const kCommerceClassName        = @"Commerce";
 static NSString* const kCommerceName        = @"commerceName";
 static NSString* const kCommerceId        = @"commerceId";
 static NSString* const kChannels        = @"channels";
+
+
+//Animación
+static float const kAnimationConstant = 0.5;
