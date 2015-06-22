@@ -15,6 +15,7 @@
 		9CEE5AD91B38B79F005F555A /* TiendasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AD81B38B79F005F555A /* TiendasTests.m */; };
 		9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AE31B38B971005F555A /* ARFInitialViewController.m */; };
 		9CEE5AE61B38B971005F555A /* ARFInitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AE41B38B971005F555A /* ARFInitialViewController.xib */; };
+		9CEE5AEE1B38BB97005F555A /* ARFListCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AED1B38BB97005F555A /* ARFListCommerceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		9CEE5AE31B38B971005F555A /* ARFInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFInitialViewController.m; sourceTree = "<group>"; };
 		9CEE5AE41B38B971005F555A /* ARFInitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFInitialViewController.xib; sourceTree = "<group>"; };
 		9CEE5AEA1B38BB00005F555A /* ARFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFConstants.h; sourceTree = "<group>"; };
+		9CEE5AEC1B38BB97005F555A /* ARFListCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFListCommerceViewController.h; sourceTree = "<group>"; };
+		9CEE5AED1B38BB97005F555A /* ARFListCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFListCommerceViewController.m; sourceTree = "<group>"; };
 		F3890F2E3A6DCD46AF815367 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				9CEE5AE71B38B9E8005F555A /* Initial VC */,
+				9CEE5AEC1B38BB97005F555A /* ARFListCommerceViewController.h */,
+				9CEE5AED1B38BB97005F555A /* ARFListCommerceViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */,
+				9CEE5AEE1B38BB97005F555A /* ARFListCommerceViewController.m in Sources */,
 				9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */,
 				9CEE5ABF1B38B79F005F555A /* main.m in Sources */,
 			);

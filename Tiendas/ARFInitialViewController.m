@@ -7,6 +7,7 @@
 //
 
 #import "ARFInitialViewController.h"
+#import "ARFListCommerceViewController.h"
 
 @interface ARFInitialViewController ()
 
@@ -26,7 +27,8 @@
 
 - (IBAction)didTapAddCommerce:(id)sender {
     
-    
+    ARFListCommerceViewController *listCommerceVC = [[ARFListCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self presentViewController:listCommerceVC animated:YES completion:nil];
     
 }
 
