@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setTitle:@"Tiendas"];
+     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Agregar Tiendas" style:UIBarButtonItemStylePlain target:self action:@selector(didTapAddCommerce:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,16 +30,15 @@
 }
 
 - (IBAction)didTapAddCommerce:(id)sender {
-    ARFListCommerceViewController *listCommerceVC = [[ARFListCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *listNavVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
+//    ARFListCommerceViewController *listCommerceVC = [[ARFListCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
+//    UINavigationController *listNavVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
     
     ARFMapCommerceViewController *mapVC = [[ARFMapCommerceViewController alloc] init];
     UINavigationController *mapNavVC = [[UINavigationController alloc] initWithRootViewController:mapVC];
     
-    UITabBarController *tabBar = [UITabBarController new];
-    [tabBar setViewControllers:@[listNavVC, mapNavVC]];
+
     
-    [self presentViewController:tabBar animated:YES completion:nil];
+    [self presentViewController:mapNavVC animated:YES completion:nil];
     
 }
 

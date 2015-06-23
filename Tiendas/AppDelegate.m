@@ -41,7 +41,7 @@
     [GMSServices provideAPIKey:kGoogleApiKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[ARFInitialViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController =[[UINavigationController alloc] initWithRootViewController:[[ARFInitialViewController alloc] initWithNibName:nil bundle:nil]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

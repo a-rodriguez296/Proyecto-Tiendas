@@ -87,6 +87,16 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cerrar" style:UIBarButtonItemStylePlain target:self action:@selector(didTapCloseView:)];
+}
+
+-(void) didTapCloseView:(id) sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark GMSMapViewDelegate
 -(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker{
 

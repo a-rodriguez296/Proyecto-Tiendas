@@ -23,7 +23,7 @@
                     </connections>
                 </switch>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.95000000000000007" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="g4b-NA-cbo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1dQ-bX-Hiy"/>
                 <constraint firstAttribute="trailing" secondItem="2nb-5V-mci" secondAttribute="trailing" constant="8" id="EQR-6v-LJh"/>
