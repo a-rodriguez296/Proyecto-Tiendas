@@ -34,11 +34,11 @@
 //    UINavigationController *listNavVC = [[UINavigationController alloc] initWithRootViewController:listCommerceVC];
     
     ARFMapCommerceViewController *mapVC = [[ARFMapCommerceViewController alloc] init];
-    UINavigationController *mapNavVC = [[UINavigationController alloc] initWithRootViewController:mapVC];
+   
     
 
     
-    [self presentViewController:mapNavVC animated:YES completion:nil];
+    [self.navigationController pushViewController:mapVC animated:YES];
     
 }
 

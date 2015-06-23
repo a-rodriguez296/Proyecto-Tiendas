@@ -90,10 +90,7 @@
     }
     
     UINavigationController *navVC = (UINavigationController *) self.window.rootViewController;
-    ARFInitialViewController *initialVC =(ARFInitialViewController *) navVC.topViewController;
-
     ARFSplashViewController *splashVC = [[ARFSplashViewController alloc] init];
-    UINavigationController *navVC1 = [[UINavigationController alloc] initWithRootViewController:splashVC];
-    [initialVC presentViewController:navVC1 animated:YES completion:nil];
+    [navVC pushViewController:splashVC animated:YES];
 }
 @end
