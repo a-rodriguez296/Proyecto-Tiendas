@@ -61,7 +61,7 @@
             // Limit what could be a lot of points.
             query.limit = 10;
             // Final list of objects
-            
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
                 
                 
