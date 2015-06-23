@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E068E0E83885E77C7E95381 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3E4A0ED1F4DEF16D629C7C /* libPods.a */; };
+		9C29C1C21B3902040027B120 /* ARFSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C29C1C01B3902040027B120 /* ARFSplashViewController.m */; };
+		9C29C1C31B3902040027B120 /* ARFSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C29C1C11B3902040027B120 /* ARFSplashViewController.xib */; };
 		9CEE5ABF1B38B79F005F555A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5ABE1B38B79F005F555A /* main.m */; };
 		9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC11B38B79F005F555A /* AppDelegate.m */; };
 		9CEE5ACA1B38B79F005F555A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEE5AC91B38B79F005F555A /* Images.xcassets */; };
@@ -38,6 +40,9 @@
 /* Begin PBXFileReference section */
 		8E7138B1C317B266A7A936BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B3E4A0ED1F4DEF16D629C7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C29C1BF1B3902040027B120 /* ARFSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFSplashViewController.h; sourceTree = "<group>"; };
+		9C29C1C01B3902040027B120 /* ARFSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFSplashViewController.m; sourceTree = "<group>"; };
+		9C29C1C11B3902040027B120 /* ARFSplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFSplashViewController.xib; sourceTree = "<group>"; };
 		9CEE5AB91B38B79F005F555A /* Tiendas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiendas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEE5ABD1B38B79F005F555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEE5ABE1B38B79F005F555A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,15 +115,15 @@
 		9CEE5ABB1B38B79F005F555A /* Tiendas */ = {
 			isa = PBXGroup;
 			children = (
+				9CEE5AEB1B38BB0F005F555A /* Utils */,
 				9CEE5AF91B38BE23005F555A /* Views */,
 				9CEE5AF21B38BDBC005F555A /* Models */,
+				9CEE5AE81B38B9F1005F555A /* Controllers */,
 				9CEE5AC01B38B79F005F555A /* AppDelegate.h */,
 				9CEE5AC11B38B79F005F555A /* AppDelegate.m */,
 				9CEE5AC91B38B79F005F555A /* Images.xcassets */,
 				9CEE5ACB1B38B79F005F555A /* LaunchScreen.xib */,
 				9CEE5ABC1B38B79F005F555A /* Supporting Files */,
-				9CEE5AE81B38B9F1005F555A /* Controllers */,
-				9CEE5AEB1B38BB0F005F555A /* Utils */,
 			);
 			path = Tiendas;
 			sourceTree = "<group>";
@@ -165,6 +170,9 @@
 				9CEE5B061B38C34E005F555A /* Map VC */,
 				9CEE5AE71B38B9E8005F555A /* Initial VC */,
 				9CEE5AF31B38BDC8005F555A /* List VC */,
+				9C29C1BF1B3902040027B120 /* ARFSplashViewController.h */,
+				9C29C1C01B3902040027B120 /* ARFSplashViewController.m */,
+				9C29C1C11B3902040027B120 /* ARFSplashViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 				9CEE5AFE1B38C2D4005F555A /* ARFMapCommerceViewController.xib in Resources */,
 				9CEE5ACD1B38B79F005F555A /* LaunchScreen.xib in Resources */,
 				9CEE5ACA1B38B79F005F555A /* Images.xcassets in Resources */,
+				9C29C1C31B3902040027B120 /* ARFSplashViewController.xib in Resources */,
 				9CEE5AE61B38B971005F555A /* ARFInitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +405,7 @@
 				9CEE5AC21B38B79F005F555A /* AppDelegate.m in Sources */,
 				9CEE5AFD1B38C2D4005F555A /* ARFMapCommerceViewController.m in Sources */,
 				9CEE5AEE1B38BB97005F555A /* ARFListCommerceViewController.m in Sources */,
+				9C29C1C21B3902040027B120 /* ARFSplashViewController.m in Sources */,
 				9CEE5AE51B38B971005F555A /* ARFInitialViewController.m in Sources */,
 				9CEE5ABF1B38B79F005F555A /* main.m in Sources */,
 			);
@@ -470,7 +480,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b81b2964-d50d-46d5-bc09-1f4376b52685";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -507,7 +517,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "b81b2964-d50d-46d5-bc09-1f4376b52685";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -519,8 +529,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tiendas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -530,8 +543,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tiendas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

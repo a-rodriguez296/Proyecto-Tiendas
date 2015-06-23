@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ARFInitialViewController.h"
 #import "ARFConstants.h"
+#import "ARFInitialViewController.h"
+#import "ARFSplashViewController.h"
 
 #import <Parse/Parse.h>
 #import <GoogleMaps/GoogleMaps.h>
@@ -87,5 +88,12 @@
         currentInstallation.badge--;
         [currentInstallation saveEventually];
     }
+    
+    UINavigationController *navVC = (UINavigationController *) self.window.rootViewController;
+    ARFInitialViewController *initialVC =(ARFInitialViewController *) navVC.topViewController;
+
+    ARFSplashViewController *splashVC = [[ARFSplashViewController alloc] init];
+    UINavigationController *navVC1 = [[UINavigationController alloc] initWithRootViewController:splashVC];
+    [initialVC presentViewController:navVC1 animated:YES completion:nil];
 }
 @end
