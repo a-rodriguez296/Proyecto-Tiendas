@@ -9,18 +9,18 @@
 #import <UIKit/UIKit.h>
 @class ARFCommerce;
 
-@protocol ARFCommerCellDelegate;
+@protocol ARFCommerceCellDelegate;
 
 @interface ARFCommerceCell : UITableViewCell
 
-@property(nonatomic, weak) id<ARFCommerCellDelegate> delegate;
+@property(nonatomic, weak) id<ARFCommerceCellDelegate> delegate;
 
 -(void) configureCellWithCommerce:(ARFCommerce *) commerceObject;
 
 @end
 
 
-@protocol ARFCommerCellDelegate <NSObject>
+@protocol ARFCommerceCellDelegate <NSObject>
 
 -(void) ARFCommerceCell:(ARFCommerceCell *) cell didChangeSwitchState:(BOOL) state;
 

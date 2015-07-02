@@ -24,8 +24,11 @@
     
     PFInstallation * currentInstalation = [PFInstallation currentInstallation];
     NSArray * channels = [currentInstalation objectForKey:kChannels];
-    BOOL contains = [channels containsObject:self.commerceId];
-    self.isUserSignedUp = contains;
+    if (channels.count) {
+        BOOL contains = [channels containsObject:self.commerceId];
+        self.isUserSignedUp = contains;
+    }
+
     return self;
 }
 

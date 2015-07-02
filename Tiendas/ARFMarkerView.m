@@ -7,22 +7,37 @@
 //
 
 #import "ARFMarkerView.h"
+#import "ARFCommerce.h"
 
 @interface ARFMarkerView ()
+
+//Propiedades Gráficas
 @property (weak, nonatomic) IBOutlet UILabel *lblCommerceName;
 @property (weak, nonatomic) IBOutlet UISwitch *viewSwitch;
+
+//Propiedades
+
+
 
 @end
 
 
 @implementation ARFMarkerView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void) configureWithCommerce:(ARFCommerce *)commerce{
+    
+    self.commerce = commerce;
+    [self.lblCommerceName setText:commerce.commerceName];
+    [self.viewSwitch setOn:commerce.isUserSignedUp];
 }
-*/
+
+
+- (IBAction)switchDidChangeValue:(id)sender {
+     UISwitch *viewSwitch = (UISwitch *) sender;
+    if ([self.delegate respondsToSelector:@selector(ARFMarkerView:didChangeSwitchState:)]) {
+        [self.delegate ARFMarkerView:self didChangeSwitchState:viewSwitch.on];
+    }
+    
+}
 
 @end

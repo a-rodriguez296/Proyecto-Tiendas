@@ -17,7 +17,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "PureLayout.h"
 
-@interface ARFMapCommerceViewController () <GMSMapViewDelegate>
+@interface ARFMapCommerceViewController () <GMSMapViewDelegate,ARFMarkerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapViewBottomCnst;
@@ -50,7 +50,10 @@
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
         if (!error) {
             @strongify(self);
+
             [self.mapView moveCamera:[GMSCameraUpdate setCamera:[GMSCameraPosition cameraWithLatitude:geoPoint.latitude longitude:geoPoint.longitude zoom:17.0]]];
+
+            
             
             
             PFQuery *query = [PFQuery queryWithClassName:kCommerceClassName];
@@ -87,34 +90,27 @@
 
 #pragma mark GMSMapViewDelegate
 -(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker{
-    @weakify(self);
-    
 
-    [UIView animateWithDuration:kAnimationConstant animations:^{
-        @strongify(self);
+    if (!self.markerView) {
         
+        //Caso en el que no se ha pintado ningun marker
+        [self createMarkerView];
+        [self initializeMarkerWithCommerce:marker.userData];
+        
+        @weakify(self);
+        [UIView animateWithDuration:kAnimationConstant animations:^{
+            @strongify(self);
+            
+            //Mover el mapa hacia arriba
+            [self.mapViewBottomCnst setConstant:66];
+            [self.view layoutIfNeeded];
+        }];
+    }
+    else{
+        //Caso en el que hay pintado un marker
+        [self initializeMarkerWithCommerce:marker.userData];
+    }
 
-        
-
-        
-//        //Mover el mapa hacia arriba
-        [self.mapViewBottomCnst setConstant:66];
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        @strongify(self);
-        self.markerView =[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFMarkerView class]) owner:self options:nil] firstObject];
-        [self.view addSubview:self.markerView];
-        
-        NSDictionary *dict = @{@"markerView": self.markerView, @"mapView": self.mapView};
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mapView]-[markerView]" options:NSLayoutFormatDirectionLeftToRight metrics:nil views:dict]];
-//
-//        NSLog(@"%f", self.view.frame.size.height);
-//        [self.markerView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.mapView];
-//        [self.markerView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.mapView];
-        [self.view layoutIfNeeded];
-        
-
-    }];
 
     return YES;
 }
@@ -126,11 +122,56 @@
         [UIView animateWithDuration:kAnimationConstant animations:^{
             @strongify(self);
             [self.mapViewBottomCnst setConstant:0];
+            
             [self.view layoutIfNeeded];
+        }completion:^(BOOL finished) {
+            [self.markerView removeFromSuperview];
+            self.markerView = nil;
         }];
     }
 
 }
 
+-(void) createMarkerView{
+    //Inicialización parte gráfica
+    self.markerView =[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFMarkerView class]) owner:self options:nil] firstObject];
+    [self.markerView setDelegate:self];
+    [self.markerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.view insertSubview:self.markerView belowSubview:self.mapView];
+    NSDictionary *viewsDictionary = @{@"markerView":self.markerView, @"mapView": self.mapView};
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[mapView]-0-[markerView]-|" options:0 metrics:nil views:viewsDictionary];
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[markerView]-0-|" options:0 metrics:nil views:viewsDictionary];
+    
+    [self.view addConstraints:verticalConstraints];
+    [self.view addConstraints:horizontalConstraints];
+    
+    [self.view layoutIfNeeded];
+}
+
+
+-(void) initializeMarkerWithCommerce:(ARFCommerce *) commerceObject{
+    [self.markerView configureWithCommerce:commerceObject];
+}
+
+#pragma mark ARFMarkerViewDelegate
+-(void)ARFMarkerView:(ARFMarkerView *)markerView didChangeSwitchState:(BOOL)state{
+    
+    ARFCommerce *commerce =markerView.commerce;
+    
+    PFInstallation * currentInstalation = [PFInstallation currentInstallation];
+    if (state) {
+        [currentInstalation addUniqueObject:commerce.commerceId forKey:kChannels];
+    }
+    else{
+        [currentInstalation removeObject:commerce.commerceId forKey:kChannels];
+    }
+    [currentInstalation saveEventually:^(BOOL succeeded, NSError *error){
+        if (!succeeded) {
+            
+        }
+    }];
+    
+}
 @end
 

@@ -13,27 +13,22 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4b-NA-cbo">
                     <rect key="frame" x="8" y="21" width="49" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-5V-mci">
                     <rect key="frame" x="263" y="17" width="51" height="31"/>
+                    <connections>
+                        <action selector="switchDidChangeValue:" destination="iN0-l3-epB" eventType="valueChanged" id="q1N-Xg-Q2l"/>
+                    </connections>
                 </switch>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-iN-vgx">
-                    <rect key="frame" x="80" y="0.0" width="160" height="66"/>
-                    <color key="backgroundColor" red="0.3355573979" green="1" blue="0.2403857385" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
             </subviews>
-            <color key="backgroundColor" red="0.99973778859999995" green="1" blue="0.076189882269999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="g4b-NA-cbo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1dQ-bX-Hiy"/>
-                <constraint firstItem="2nb-5V-mci" firstAttribute="leading" secondItem="pPe-iN-vgx" secondAttribute="trailing" constant="23" id="AhD-zb-knu"/>
                 <constraint firstAttribute="trailing" secondItem="2nb-5V-mci" secondAttribute="trailing" constant="8" id="EQR-6v-LJh"/>
-                <constraint firstItem="pPe-iN-vgx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SJj-h9-rjQ"/>
-                <constraint firstItem="pPe-iN-vgx" firstAttribute="leading" secondItem="g4b-NA-cbo" secondAttribute="trailing" constant="23" id="acS-Sj-540"/>
                 <constraint firstItem="2nb-5V-mci" firstAttribute="centerY" secondItem="g4b-NA-cbo" secondAttribute="centerY" constant="-0.5" id="cuK-Zr-thf"/>
                 <constraint firstAttribute="centerY" secondItem="g4b-NA-cbo" secondAttribute="centerY" id="pj7-rL-xBe"/>
-                <constraint firstAttribute="bottom" secondItem="pPe-iN-vgx" secondAttribute="bottom" id="vYh-OJ-Udg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

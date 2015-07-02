@@ -22,6 +22,7 @@
 		9CDA91811B34B632004F5398 /* ARFMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDA91801B34B632004F5398 /* ARFMarkerView.xib */; };
 		9CDA91871B34BC58004F5398 /* ARFMapCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA91851B34BC58004F5398 /* ARFMapCommerceViewController.m */; };
 		9CDA91881B34BC58004F5398 /* ARFMapCommerceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDA91861B34BC58004F5398 /* ARFMapCommerceViewController.xib */; };
+		9CEE5AAA1B38AF14005F555A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEE5AA91B38AF14005F555A /* Foundation.framework */; };
 		EC628F48283C10F1FDEEABF0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A27CFCCA21CE1A728F7114F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9CDA91841B34BC58004F5398 /* ARFMapCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMapCommerceViewController.h; sourceTree = "<group>"; };
 		9CDA91851B34BC58004F5398 /* ARFMapCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMapCommerceViewController.m; sourceTree = "<group>"; };
 		9CDA91861B34BC58004F5398 /* ARFMapCommerceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFMapCommerceViewController.xib; sourceTree = "<group>"; };
+		9CEE5AA91B38AF14005F555A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A27CFCCA21CE1A728F7114F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDAEBCF9DA6A69766E745AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEE5AAA1B38AF14005F555A /* Foundation.framework in Frameworks */,
 				EC628F48283C10F1FDEEABF0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +93,7 @@
 		755FE076E6334FEEB0A1B51B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CEE5AA91B38AF14005F555A /* Foundation.framework */,
 				A27CFCCA21CE1A728F7114F7 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -447,7 +451,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "f778d7ec-a8cc-44dc-bbcc-d65b07ee41eb";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -484,7 +488,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "f778d7ec-a8cc-44dc-bbcc-d65b07ee41eb";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -495,12 +499,13 @@
 			baseConfigurationReference = 83665B32506E00FB97D031EC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tiendas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -509,12 +514,13 @@
 			baseConfigurationReference = FEDAEBCF9DA6A69766E745AD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tiendas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "66d280b1-818f-48e0-9fd1-a8b11e7eb1a3";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

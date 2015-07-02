@@ -9,6 +9,8 @@
 #import "PFQueryTableViewController.h"
 #import "ARFCommerceCell.h"
 
-@interface ARFCommerceTableViewController : PFQueryTableViewController <ARFCommerCellDelegate>
+#import <ParseUI/ParseUI.h>
+
+@interface ARFCommerceTableViewController : PFQueryTableViewController
 
 @end
