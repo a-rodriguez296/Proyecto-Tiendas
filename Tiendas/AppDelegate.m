@@ -12,6 +12,9 @@
 
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
+#import <UAirship.h>
+#import <UAConfig.h>
+#import <UAPush.h>
 
 @interface AppDelegate ()
 
@@ -22,18 +25,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    //Urban Airship
+    [UAConfig defaultConfig];
+    [UAirship takeOff];
+//    NSString *channelId = [UAirship push].channelID;
+//    NSLog(@"My Application Channel ID: %@", channelId);
+    [UAirship push].userNotificationTypes = (UIUserNotificationTypeAlert |
+                                             UIUserNotificationTypeBadge |
+                                             UIUserNotificationTypeSound);
+//    [UAirship push].userPushNotificationsEnabled = YES;
+    
+    
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
     
     //Parse Notifications
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
-                                                    UIUserNotificationTypeBadge |
-                                                    UIUserNotificationTypeSound);
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                             categories:nil];
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
+//    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+//                                                    UIUserNotificationTypeBadge |
+//                                                    UIUserNotificationTypeSound);
+//    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+//                                                                             categories:nil];
+//    [application registerUserNotificationSettings:settings];
+//    [application registerForRemoteNotifications];
     
     //Parte Google Maps
     [GMSServices provideAPIKey:kGoogleApiKey];
@@ -70,21 +84,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    [currentInstallation saveInBackground];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    if (currentInstallation.badge != 0) {
-        currentInstallation.badge--;
-        [currentInstallation saveEventually];
-    }
-}
+//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+//    // Store the deviceToken in the current installation and save it to Parse.
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    [currentInstallation setDeviceTokenFromData:deviceToken];
+//    [currentInstallation saveInBackground];
+//}
+//
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+//    [PFPush handlePush:userInfo];
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    if (currentInstallation.badge != 0) {
+//        currentInstallation.badge--;
+//        [currentInstallation saveEventually];
+//    }
+//}
 
 
 @end

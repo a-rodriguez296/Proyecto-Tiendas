@@ -9,8 +9,8 @@ PODS:
     - Asterism (~> 1.0)
     - Mantle (~> 1.5)
     - Parse (~> 1.6)
-  - Parse (1.7.4):
-    - Bolts/Tasks (>= 1.1.5)
+  - Parse (1.7.5):
+    - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
   - PureLayout (2.0.6)
@@ -21,6 +21,15 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - UrbanAirship-iOS-SDK/All (6.1.0):
+    - UrbanAirship-iOS-SDK/Core
+    - UrbanAirship-iOS-SDK/PushUI
+    - UrbanAirship-iOS-SDK/RichPushUI
+  - UrbanAirship-iOS-SDK/Core (6.1.0)
+  - UrbanAirship-iOS-SDK/PushUI (6.1.0):
+    - UrbanAirship-iOS-SDK/Core
+  - UrbanAirship-iOS-SDK/RichPushUI (6.1.0):
+    - UrbanAirship-iOS-SDK/Core
 
 DEPENDENCIES:
   - GoogleMaps
@@ -29,6 +38,7 @@ DEPENDENCIES:
   - ParseUI
   - PureLayout
   - ReactiveCocoa
+  - UrbanAirship-iOS-SDK/All
 
 SPEC CHECKSUMS:
   Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
@@ -36,9 +46,10 @@ SPEC CHECKSUMS:
   GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
   MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
-  Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
+  Parse: 7c0f115eff3e0cea3fac08d50bda47154edb8832
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  UrbanAirship-iOS-SDK: a8acad047f1c8f719ff83580d3103f5feab5b23b
 
 COCOAPODS: 0.37.2
