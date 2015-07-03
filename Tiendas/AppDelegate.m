@@ -27,13 +27,39 @@
 
     //Urban Airship
     [UAConfig defaultConfig];
+    
+    //Se da cuenta en runtime si esta en development o en producción
+    [[UAConfig defaultConfig] setDetectProvisioningMode:YES];
+    
+    //Definir que tanto me sale en la consola
+    [[UAConfig defaultConfig] setDevelopmentLogLevel:UALogLevelError];
+    
+
+    
+    
+    
     [UAirship takeOff];
-//    NSString *channelId = [UAirship push].channelID;
-//    NSLog(@"My Application Channel ID: %@", channelId);
+    NSString *channelId = [UAirship push].channelID;
+    NSLog(@"My Application Channel ID: %@", channelId);
     [UAirship push].userNotificationTypes = (UIUserNotificationTypeAlert |
                                              UIUserNotificationTypeBadge |
                                              UIUserNotificationTypeSound);
-//    [UAirship push].userPushNotificationsEnabled = YES;
+
+    //Definir los tags. Con esto se puede hacer la segmentación
+    [UAirship push].tags = @[@"Hola"];
+    //Siempre después de agregar un tag hay que hacer este update.
+    [[UAirship push] updateRegistration];
+    
+    
+    //Alias
+    //Si se hace el set acá no hay que hacer updateRegistration. En otra parte si.
+    [[UAirship push] setAlias:@"Alejandro"];
+    
+    //Quiet tiem
+    [[UAirship push] setQuietTimeStartHour:23 startMinute:00 endHour:6 endMinute:30];
+    [[UAirship push] setQuietTimeEnabled:YES];
+    [[UAirship push] updateRegistration];
+    
     
     
     //Parse Registration
