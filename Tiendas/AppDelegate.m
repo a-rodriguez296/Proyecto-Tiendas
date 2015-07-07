@@ -12,9 +12,10 @@
 
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
-#import <UAirship.h>
-#import <UAConfig.h>
-#import <UAPush.h>
+#import "UAirship.h"
+#import "UAConfig.h"
+#import "UAPush.h"
+#import "UALocationService.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,7 @@
     [[UAConfig defaultConfig] setDevelopmentLogLevel:UALogLevelError];
     
 
-    
+
     
     
     [UAirship takeOff];
@@ -45,8 +46,10 @@
                                              UIUserNotificationTypeBadge |
                                              UIUserNotificationTypeSound);
 
+    
+    
     //Definir los tags. Con esto se puede hacer la segmentación
-    [UAirship push].tags = @[@"Hola"];
+    [UAirship push].tags = @[@"Alejandro",@"Pedro"];
     //Siempre después de agregar un tag hay que hacer este update.
     [[UAirship push] updateRegistration];
     
@@ -55,10 +58,21 @@
     //Si se hace el set acá no hay que hacer updateRegistration. En otra parte si.
     [[UAirship push] setAlias:@"Alejandro"];
     
+    [[UAirship push] setAutobadgeEnabled:YES];
+    [[UAirship push] resetBadge];//zero badge
+    
+    
+    
     //Quiet tiem
     [[UAirship push] setQuietTimeStartHour:23 startMinute:00 endHour:6 endMinute:30];
     [[UAirship push] setQuietTimeEnabled:YES];
     [[UAirship push] updateRegistration];
+    
+    
+    [UALocationService setAirshipLocationServiceEnabled:YES];
+    UALocationService *locationService = [UAirship shared].locationService;
+    locationService.backgroundLocationServiceEnabled = NO;
+    [locationService startReportingSignificantLocationChanges];
     
     
     

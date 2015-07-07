@@ -8,8 +8,10 @@
 
 #import "ARFMainViewController.h"
 #import "ARFCommerceTableViewController.h"
-
-
+#import "UAirship.h"
+#import "UACustomEvent.h"
+#import "UAAnalytics.h"
+#import "UALocationService.h"
 
 
 
@@ -22,6 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UACustomEvent *event = [UACustomEvent eventWithName:@"Controller"];
+    
+    // Record the event
+    [[UAirship shared].analytics addEvent:event];
+    
+    //Report Location
+    [[UAirship shared].locationService reportCurrentLocation];
+
 }
 
 - (void)didReceiveMemoryWarning {
